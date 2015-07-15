@@ -1,0 +1,82 @@
+
+ *= require_self
+ *= require_tree .
+
+/*ページ全体*/
+body{
+  background-color: white;
+  color: black;
+  margin: 0;padding: 0;
+  font-family: Meiryo,sans-serif;
+}
+/*リンク*/
+a:link{color:#00c;}
+a:visited{color: #00c;}
+a:hover{color: #ccf;}
+a img{border: none;}
+
+/*全体の枠*/
+div#container{
+  margin: 0 auto;
+  padding-top: 5px;
+  width: 780px;
+}
+/*左の枠*/
+div#content{
+  float: left;
+  width: 530px;
+  padding: 10px 10px 10px 0;
+}
+
+/*右の枠*/
+div#sidebar{
+  float: left;
+  width: 230px;
+  background-color: #e8ffff;
+  padding: 5px;
+  font-size: 86%;
+}
+
+div#footer{
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+}
+
+/*メニューバーのリンク*/
+div.menubar a {text-decoration: none;}
+/*メニューバーのリンク（未訪問）*/
+div.menubar a:link{color: #ccc;}
+/*メニューバーのリンク（訪問済み）*/
+div.menubar a:visited{color: #ccc;}
+
+
+/*表：一覧表示：詳細表示*/
+
+table.list, table.attr{
+  font-size: 90%;
+  width:100%;
+}
+
+table.list th, table.attr th{
+  background-color: #499;
+  color: white;
+  font-weight: normal;
+}
+
+table.list td, table.list th,
+table.attr td, table.attr th{
+  padding: 4px;
+}
+
+table.list th{
+  text-align: left;
+}
+
+table.attr th{
+  text-align: right;
+}
+
+table.list td, table.attr td{
+  background-color: #cee;
+}
