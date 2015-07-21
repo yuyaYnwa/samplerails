@@ -5,7 +5,7 @@ body =
 
   0.upto(9) do |idx|
     Article.create(
-    title:"初投稿です#{idx}",
+    title:"ブログを更新しました!#{idx}",
     body:body,
     release_at:8.days.ago.advance(days: idx),
     expire_at:2.days.ago.advance(days:idx),
