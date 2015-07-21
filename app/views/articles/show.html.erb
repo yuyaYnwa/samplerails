@@ -17,7 +17,7 @@
   </tr>
   <tr>
     <th>掲載終了日時</th>
-    <td><%= @article.expire_at.strftime("%Y/%m/%d %H:%M") %></td>
+    <td><%= @article.expire_at.try(:strftime,"%Y/%m/%d %H:%M") %></td>
   </tr>
   <tr>
     <th>会員限定</th>
