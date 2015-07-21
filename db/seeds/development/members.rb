@@ -10,5 +10,7 @@ gnames = ["太郎","次郎","花子"]
   birthday: "1987-08-26",
   gender: [0,0,1][idx % 3],
   administrator: (idx == 0)
+  password: "password"
+  password_confirmation: "password"
   )
 end

@@ -2,7 +2,7 @@ class Member < ActiveRecord::Base
   #emailアドレスのValidationファイル
   #include EmailAddressChecker
   include EmailAddressChecker
-  
+
   #空文字禁止、1以上100未満の整数、会員間の重複禁止
   validates :number,presence:true,
   numericality:{
@@ -17,8 +17,19 @@ class Member < ActiveRecord::Base
   uniqueness:{case_sensitive: false}
   #氏名は20文字以下、空文字あり
   validates :full_name,length:{maximum:20}
+  attr_accessor :password, :password_confirmation
+
+  def password=(val)
+    if val.present?
+      #パスワードが暗号化され、hasshed_password属性に入る
+      self.hashed_password = BCrypt::Password.create(val)
+    end
+    @password = val
+  end
 
   validate :check_email
+  validates :password,presence:{on: :create},confirmation:{allow_blank: true}
+
   private
   def check_email
     if email.present?
