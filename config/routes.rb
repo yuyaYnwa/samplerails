@@ -12,6 +12,12 @@ Rails.application.routes.draw do
     collection{get "search"}
   end
 
+  resources :members do
+    collection{get"search"}
+  end
+  resources :articles
+  
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

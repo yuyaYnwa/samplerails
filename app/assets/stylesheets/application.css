@@ -1,8 +1,9 @@
-
+/*
  *= require_self
  *= require_tree .
-
+*/
 /*ページ全体*/
+
 body{
   background-color: white;
   color: black;
@@ -55,34 +56,3 @@ div.menubar a {text-decoration: none;}
 div.menubar a:link{color: #ccc;}
 /*メニューバーのリンク（訪問済み）*/
 div.menubar a:visited{color: #ccc;}
-
-
-/*表：一覧表示：詳細表示*/
-
-table.list, table.attr{
-  font-size: 90%;
-  width:100%;
-}
-
-table.list th, table.attr th{
-  background-color: #499;
-  color: white;
-  font-weight: normal;
-}
-
-table.list td, table.list th,
-table.attr td, table.attr th{
-  padding: 4px;
-}
-
-table.list th{
-  text-align: left;
-}
-
-table.attr th{
-  text-align: right;
-}
-
-table.list td, table.attr td{
-  background-color: #cee;
-}
