@@ -1,4 +1,5 @@
-<% 6.times do |x| %>
-<h2>見出し</h2>
-<p>ここに本文が入ります。ここに本文が入ります。ここに本文が入ります。<%= link_to "もっと読む", "#" %></p>
+<% @articles.each do |article| %>
+<h2><%= article.title %></h2>
+<!--truncateメソッドで短くし、もっと読むで記事の詳細ページにリンク-->
+<p><%= truncate(article.body,length: 80) %><%= link_to "もっと読む",article %></p>
 <% end %>
